@@ -300,7 +300,43 @@ namespace GDI__prog1
                 { if (y == 3 && x == 8) { rdr(); rdr(); frd(); frd(); goto m14; } }/* */ //}
             }
         }
-            m14: ;
+            //here start orienting 14
+            m14:  if (mas[7, 3] == 14) goto m15;
+            for (x = 0; x < 12; x++)
+            {
+                for (y = 0; y < 12; y++)
+                {
+                    if (mas[x, y] == 14)
+                    {
+                        if (x == 1 && y == 5) goto m14_2;
+                        if (x == 7 && y == 5) { rcr(); rcr(); uur(); uur(); rcr(); rcr(); goto m15; }
+                        if (x == 8 && y == 4) { rcr(); rcr(); uul(); rcr(); rcr(); goto m15; }
+                        if (y < 3) { rcl(); rdl(); y += 9; } else if (y > 5 && y < 9) { rcl(); rdl(); y -= 3; }
+                        if (x < 6 && x > 2) { if (x == 4) { ucr(); ucr(); x += 6; if (y == 3) y = 5; else y = 3; } else { uur(); uur(); x += 9; } }
+                        else if (y != 5 && x < 3) { if (y == 3) { uur(); uur(); y += 2; goto m14_2; } else if (x == 0) { uur(); x += 1; y += 1; goto m14_2; } else if (x == 2) { uur(); x -= 1; y += 1; goto m14_2; } }
+                        else
+                        {
+                            if (y == 3 && x == 7) { goto m15; }
+                                 else if (x == 7 && y == 9) { goto m14_2; }
+                            else if    (x == 7 && y == 5) { rcr(); rcr(); uur(); uur(); rcr(); rcr(); goto m15; }
+                                         else goto m14_1;
+                                } 
+                        if (x > 8)
+                        {
+                            if (x == 11) { goto m14_1; }
+                            else if (x == 9) { rdr(); rdr(); x += 2; goto m14_1; }
+                            else if (y == 3) { rdl(); y += 1; x += 1; goto m14_1; }
+                            else { rdr(); y -= 1; x += 1; goto m14_1; }
+                        }
+                      
+                        if (x == 8 && y == 4) { rcr(); rcr(); uul(); rcr(); rcr(); }
+                    } 
+                }
+            }
+   
+        m14_1: uur(); rcr();goto m15;
+    m14_2: rcl();rcl(); goto m15;
+        m15: ;
         }
 
        
