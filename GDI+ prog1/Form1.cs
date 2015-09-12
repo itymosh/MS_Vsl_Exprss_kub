@@ -384,7 +384,6 @@ namespace GDI__prog1
                         Brush brush4 = new LinearGradientBrush(pt[0], pt[1], Color.FromArgb(0, 0, 100), Color.FromName("Blue"));
                         Brush brush5 = new LinearGradientBrush(pt[0], pt[1], Color.FromArgb(100, 0, 0), Color.FromName("Red"));
                         Brush brush6 = new LinearGradientBrush(pt[0], pt[1], Color.FromArgb(0, 100, 0), Color.FromName("Green"));
-
                         for (int r = 0; r < 2; r++)
                         {
                             if (r == 0)
@@ -423,8 +422,9 @@ namespace GDI__prog1
                     }
 
                 }
+             
             }// end for 
-        
+         
         }
         public  void  mal_kub(Brush b, int i, int j, int x, int l, int y, int k, int m, int p,Point[] par1,Point[] par2)
         {
@@ -433,6 +433,24 @@ namespace GDI__prog1
             if ((i > 5) & (i < 9) & (j > 5)) { g.FillPolygon(b, par2); }//m += 55; p -= 55; }
             if ((i > 2) & (i < 6)) { g.FillPolygon(b, par1); } 
             l += 110;
+    /*        Pen pen = new Pen(Color.Black, 10);
+                Brush brush7 = new SolidBrush(Color.Black);
+            g.DrawLine(pen, 740, 205, 1060, 205);//FillRectangle(brush7, new Rectangle(740, 200, 320, 10));
+            g.FillRectangle(brush7, new Rectangle(1050, 200, 10, 320));
+            g.DrawLine(pen, 1055, 205, 1220, 40);
+            g.DrawLine(pen, 1220, 40, 1220, 360);
+            g.DrawLine(pen, 1220, 356, 1055, 520);//rd
+            g.DrawLine(pen, 1058, 520, 740, 520);
+            g.DrawLine(pen, 740, 525,740,200 );
+            g.DrawLine(pen, 738, 205,905,33 );
+            g.DrawLine(pen, 902, 34,1224,35 );
+            float[] dashValues = { 3,3,3,3 };
+          
+            pen.DashPattern = dashValues;
+            g.DrawLine(pen, new Point(902, 360), new Point(1220, 360));
+            g.DrawLine(pen, new Point(902, 360), new Point(902, 34));
+            g.DrawLine(pen, new Point(902, 360), new Point(740, 520));
+            */
         }
 
         public void left()
